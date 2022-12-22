@@ -26,11 +26,13 @@ function menampilkanError(isError) {
     }
 }
 
-function displayAllNumbers(n) {
+function displayDividedThree(n) {
     let numberList = [];
 
     for(let i = 1; i <= n; i++) {
-        numberList.push(i);
+        if (i % 3 == 0) {
+            numberList.push(i);
+        }
     }
 
     return numberList;
@@ -38,7 +40,7 @@ function displayAllNumbers(n) {
 
 function displayHelloWords(n) {
     let isDone = false;
-    let message;
+    let message = "";
     let index = 1;
 
     while (isDone != true) {
@@ -58,7 +60,7 @@ const info_1 = tebakUmur(3);
 const info_2 = tebakUmur(40);
 // menampilkanError(true);
 
-const numbers = displayAllNumbers(20);
+const numbers = displayDividedThree(20);
 
 document.write(numbers);
-document.write(displayHelloWords(5));
+// document.write(displayHelloWords(5));
