@@ -56,11 +56,45 @@ function displayHelloWords(n) {
     return message
 }
 
+/**
+ * AND = &&
+ * true AND true    = true
+ * true AND false   = false
+ * false AND true   = false
+ * false AND false  = false
+ * 
+ * OR = ||
+ * true  || true     = true
+ * true  || false    = true
+ * false || true     = true
+ * false || false    = false
+ */
+
+const negaraMobil = (mobil) => {
+    if ((mobil === "nissan") || (mobil === "honda") || (mobil === "suzuki")) {
+        return "jepang";
+    } else {
+        return "negara lain";
+    }
+}
+
+const result_2 = (awal, akhir) => {
+    let array = [];
+
+    for (let n = awal; n <= akhir; n++) {
+        let y = (n + (n-1) * ((n-1)/2 - 0.5));
+        array.push(y);
+    }
+    
+    return array;
+}
+
 const info_1 = tebakUmur(3);
 const info_2 = tebakUmur(40);
 // menampilkanError(true);
 
 const numbers = displayDividedThree(20);
 
-document.write(numbers);
+// document.write(numbers);
+document.write(result_2(1,99));
 // document.write(displayHelloWords(5));
