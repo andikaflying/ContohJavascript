@@ -58,6 +58,11 @@ const rows = [
 rows.sort((a, b) => a.age - b.age);
 document.write(JSON.stringify(rows) + "<br />");
 
+/**
+ * Ilustrasi Class dan Object. 
+ * Class itu prototype. Object itu wujud nyata dari Class.
+ * Misal, class Alat Tulis. Maka object nya Pulpen dan Pensil.
+ */
 class Sport {
     constructor(name) {
         this.namaOlahraga = name;
