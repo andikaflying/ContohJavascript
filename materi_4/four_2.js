@@ -20,7 +20,9 @@ document.write(welcome.indexOf("a")  + "<br />");
 
 class Deret {
 
+    //constructor
     constructor(deret) {
+        //property
         this.deretKu = deret;
     }
 
@@ -28,6 +30,7 @@ class Deret {
         return this.deretKu.indexOf(nilai);
     }
 
+    //fungsi
     cekApakahAda(nilai) {
         return this.deretKu.includes(nilai);
     }
@@ -48,9 +51,9 @@ const books = [
 ];
 
 //Ingin mendapatkan list Author yg sales nya di atas 1000000
-const filteredBooks = books.filter((buku) => buku.sales > 1000000);
+const filteredBooks = books.filter((buku) => buku.sales < 1000000);
 document.write(JSON.stringify(filteredBooks)  + "<br />");
-const authorList = filteredBooks.map((item) => item.author);
+const authorList = filteredBooks.map((item) => item.author + " has " + item.title + " book");
 document.write(authorList);
 
 const helloAlert = () => alert("Hello");
@@ -58,5 +61,17 @@ const haiAlert = () => {
     alert("Hai");
 };
 
-helloAlert();
-haiAlert();
+// helloAlert();
+// haiAlert();
+
+
+
+function myGreeting() {
+  document.write("Hallo semua! <br />");
+}
+
+document.write("Hallo <br />");
+// const myTimeout = setTimeout(myGreeting, 100);
+document.write("Hallo 2 <br />");
+document.write("Hallo 3 <br />");
+

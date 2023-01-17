@@ -4,6 +4,14 @@
         <script src="./four_2.js"></script>
     </head>
     <body>
+        <h2>The setInterval() Method</h2>
+        <p id="demo">Hello</p>
 
+        <script>
+            const element = document.getElementById("demo");
+            setInterval(function() {
+                element.innerHTML += "Hello"
+            }, 1000);
+        </script>
     </body>
 </html>
